@@ -1,0 +1,10 @@
+body{
+    background: none;
+}
+.main-nav-list a{
+    color: black;
+    padding-right: 37px;
+}
+.active{
+    border-bottom: 1px solid #68b738;
+}
