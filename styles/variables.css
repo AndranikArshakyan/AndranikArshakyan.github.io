@@ -1,0 +1,14 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+:root {
+  --main-text: #f1b2ce;
+  --accent-text: #db00ff;
+  --accent-color: #ff0070;
+  --bg-color: #000028;
+  --border-color: #ff007066;
+  --main-font: "IBM Plex mono";
+  --main-text-size: 18px;
+  --title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+}

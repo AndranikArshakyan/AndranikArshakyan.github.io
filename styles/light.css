@@ -1,0 +1,104 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root.theme_light {
+  --accent-text: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --main-text: #353430;
+  --bg-color: #fff1f7;
+  --border-color: #35343166;
+}
+
+.page.theme_light {
+  --accent-text: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --main-text: #353430;
+  --bg-color: #fff1f7;
+  --border-color: #35343166;
+  /* сохраните этот селектор в приведённом виде.
+    Так стили написанные ниже будут иметь больший вес,
+    чем стили в медиазапросе предпочтений пользователя
+  */
+  background-color: var(--bg-color);
+  background-image: url(../images/cover-image-light.png);
+
+  @media (width >= 1024px) {
+    .header__title,
+    .footer__title {
+      --accent-color: #ff0070;
+    }
+  }
+
+  .header__theme-menu-button {
+    --accent-color: var(--main-text);
+  }
+
+  .header__theme-menu-button:hover {
+    border-color: var(--border-color);
+  }
+
+  .header__description,
+  .section-article__title,
+  .section-title,
+  .section-subtitle {
+    --text-color: var(--main-text);
+  }
+
+  .decorated-zone::after,
+  .decorated-zone::before {
+    --accent-color: var(--main-text);
+  }
+
+  .decorated-zone__dot {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+
+  @media (width >= 1024px) {
+    .header__title,
+    .footer__title {
+      --accent-color: #ff0070;
+    }
+  }
+  :root {
+    --accent-text: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --main-text: #353430;
+    --bg-color: #fff1f7;
+    --border-color: #35343166;
+  }
+
+  .page {
+    background-color: var(--bg-color);
+    background-image: url(../images/cover-image-light.png);
+  }
+
+  .header__theme-menu-button {
+    --accent-color: var(--main-text);
+  }
+
+  .header__theme-menu-button:hover {
+    border-color: var(--border-color);
+  }
+
+  .header__description,
+  .section-article__title,
+  .section-title,
+  .section-subtitle {
+    --text-color: var(--main-text);
+  }
+
+  .decorated-zone::after,
+  .decorated-zone::before {
+    --accent-color: var(--main-text);
+  }
+
+  .decorated-zone__dot {
+    display: none;
+  }
+}
